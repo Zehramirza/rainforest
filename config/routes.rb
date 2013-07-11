@@ -1,4 +1,8 @@
 Rainforest::Application.routes.draw do
+  get "users/new"
+
+  get "users/create"
+
   resources :products
   
   # The priority is based upon order of creation:
