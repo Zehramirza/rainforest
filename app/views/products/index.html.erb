@@ -1,5 +1,6 @@
-<h1>Products#index</h1>
+<h1 style= "background-color: beige; color: grey">Products#index</h1>
+<div style= "border: 1px solid black; background-color: grey; color: white; ">
 <%#= @product.formatted_price %>
 <% @products.each do |product| %>
-	<%= product.formatted_price %>
+	<%= product.formatted_price %> <br>
 <% end %>

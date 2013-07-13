@@ -10,10 +10,18 @@ class ProductsController < ApplicationController
     end
   end
 
+  def formatted_price( product )
+    product.price_in_cents
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
+
+    if current_user
+      @review = @product.reviews.build
+    end
 
     respond_to do |format|
       format.html # show.html.erb
